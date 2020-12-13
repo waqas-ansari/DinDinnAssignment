@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/generic_card_margin"
+    app:cardCornerRadius="@dimen/large_card_radius">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFood"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_view_image_height"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_food_img" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/generic_margin_large">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textFoodTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/generic_padding"
+                android:text="Food Title"
+                android:textSize="@dimen/text_size_large" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textFoodDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/generic_padding"
+                android:text="Food Description" />
+
+
+            <RelativeLayout
+                android:id="@+id/detailAndAddToCartLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textFoodDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/btnAddToCart"
+                    android:layout_toStartOf="@+id/btnAddToCart"
+                    android:padding="@dimen/generic_padding"
+                    android:text="Food Detail"
+                    android:textSize="@dimen/text_size_small" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAddToCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:textColor="@android:color/white"
+                    android:layout_margin="@dimen/icon_margin"
+                    android:background="@drawable/button_unfocused"/>
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>
